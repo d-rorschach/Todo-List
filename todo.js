@@ -63,6 +63,12 @@ function del_all()
   document.getElementById('add').innerHTML="";
 }
 
+function ClearFields() {
+
+     document.getElementById("title").value = "";
+     document.getElementById("work").value = "";
+}
+
 function addcard()
 {
     let x=document.getElementById('title').value;
@@ -77,6 +83,7 @@ function addcard()
     localStorage.setItem('arr',JSON.stringify(arr));
     print(i,x,y);
     ++i;
+    ClearFields();
 }
 
 function showopt(p)
